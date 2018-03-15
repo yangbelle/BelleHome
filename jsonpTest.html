@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsonp</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        var inputTest=$('#input').val();
+        /*$.ajax({
+        url: 'http://www.b.com/getdata?callback=?', //不指定回调名，可省略callback参数，会由jQuery自动生成
+            dataType: 'jsonp',
+            jsonpCallback: 'demo', //可省略
+            success: function(data) {
+            console.log(data.msg);
+        }
+        });*/
+        $.ajax({
+            url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy?wd=g&json=1&cb=callback",
+            dataType:'jsonp',
+            // jsonpCallback:"callback",
+            success:function(data) {
+                console.log('msg'+data.msg);
+            }
+        })
+         function  callback(data) {
+             console.log(data);
+              //var obj=JSON.parse(data);
+             // console.log(obj.g.length);
+             console.log(data.s[0]);
+         }
+    </script>
+</head>
+<body>
+ <input type="text" id="input">
+<ul id="regexpchar"></ul>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>我爱旅行</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="keyword" content="bootstrap,yangchunying blog,html5 personal show">
+    <!--<meta http-equiv="refresh" content="3">-->
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/mouseHoverEffectsback.css" media="all">
+    <link href="css/styleback.css" rel="stylesheet" type="text/css" media="all"/>
+    <style>
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .banner{
+            min-height:initial;
+        }
+
+    </style>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        function Person() {
+
+        }
+
+        var person = new Person();
+    </script>
+</head>
+<body>
+<!-- header -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+
+        <!-- //home -->
+
+        <div class="section home swiper-slide container" id="home">
+            <!--<div class="container">-->
+                <h3 class="tittle">Welcome to my zone</h3>
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 person_info_box effect-7">
+                        <div class="img">
+                            <img alt="" src="images/glass.png" class="img-responsive">
+                        </div>
+                        <div class="person_info">
+                            <h4 class="theme">基本信息</h4>
+                            <p>姓名：杨春英 女</p>
+                            <p>年龄：27 籍贯：湖南常德</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 person_info_box effect-7">
+                        <div class="img">
+                            <img alt="" src="images/hat.png" class="img-responsive">
+                        </div>
+                        <div class="person_info">
+                            <h4 class="theme">毕业院校</h4>
+                            <p>湘潭大学</p>
+                            <p>信息工程学院</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 person_info_box effect-7">
+                        <div class="img">
+                            <img alt="" src="images/book.png" class="img-responsive">
+                        </div>
+                        <div class="person_info">
+                            <h4 class="theme">学历与专业</h4>
+                            <p>学历：本科</p>
+                            <p>专业：计算机科学与技术 </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 person_info_box effect-7">
+                        <div class="img">
+                            <img alt="" src="images/tel.png" class="img-responsive">
+                        </div>
+                        <div class="person_info">
+                            <h4 class="theme">联系方式</h4>
+                            <p>邮箱：337431259@qq.com</p>
+                            <p>电话：13670106045</p>
+                        </div>
+                    </div>
+                </div>
+            <!--</div>-->
+        </div>
+        <div class="section home swiper-slide container">
+                <h4 class="tittle">专业技能</h4>
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                        <ul>
+                            <li>精通DIV+CSS布局的HTML代码编写，良好的前端体验和页面响应速度，并保证兼容性和执行效率</li>
+                            <li>熟练掌握Javascript、Ajax、CSS/CSS3、HTML/HTML5等Web前端技术，熟练使用原生js,
+                                了解js面向对象原理，闭包以及原型结构，能够合理利用面向对象以及模块化开发
+                            </li>
+                            <li>熟练jQuery,Bootstrap 框架的使用，会基于流式布局以及响应式布局开发基于移动端的页面</li>
+                            <li>熟悉Git或SVN代码管理，代码风格规范严谨工整</li>
+                            <li>有.net开发经验</li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<script src="js/bootstrap.js"></script>
+<!-- Initialize Swiper -->
+<script src="js/swiper-3.4.2.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        wrapperClass: 'swiper-wrapper',
+        slideClass: 'swiper-slide',
+        direction: 'vertical',
+        followFinger: false,
+        speed: 800,
+        mousewheel: true,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        // on: {
+        //     init: function (swiper) {
+        //         slide = this.slides.eq(0);
+        //         slide.addClass('ani-slide');
+        //     },
+        //     transitionStart: function () {
+        //         for (i = 0; i < this.slides.length; i++) {
+        //             slide = this.slides.eq(i);
+        //             slide.removeClass('ani-slide');
+        //         }
+        //     },
+        //     transitionEnd: function () {
+        //         slide = this.slides.eq(this.activeIndex);
+        //         slide.addClass('ani-slide');
+        //
+        //     },
+        // }
+    });
+
+</script>
+</body>
+</html>
