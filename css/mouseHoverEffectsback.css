@@ -314,9 +314,10 @@ input{}
     }
 }
 #home .tittle:hover{
-    -webkit-animation: changeBack 1.5s;
-    -o-animation: changeBack 1.5s;
-    animation: changeBack 1.5s;
+    /*-webkit-animation: changeBack 1.5s;*/
+    /*-o-animation: changeBack 1.5s;*/
+    /*animation: changeBack 1.5s;*/
+    color:#7D37CE ;
 }
 
 #home .person_info_box .img img{
@@ -412,6 +413,11 @@ input{}
     font-size: 14px;
     margin: 5px 0  0 10px;
     line-height: 14px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s ;
+    -ms-transition: all 0.5s ;
+    -o-transition: all 0.5s ;
+    transition: all 0.5s ;
 }
 @-webkit-keyframes changeColor {
     0%{
@@ -426,11 +432,19 @@ input{}
         color: #7D37CE;
     }
 }
+/*.skill_box ul li:hover,*/
+/*.skill_box p:hover{*/
+    /*-webkit-animation: changeColor 1s;*/
+    /*-o-animation: changeColor 1s;*/
+    /*animation: changeColor 1s;*/
+    /**/
+/*}*/
+/*兼容ie*/
 .skill_box ul li:hover,
 .skill_box p:hover{
-    -webkit-animation: changeColor 1s;
-    -o-animation: changeColor 1s;
-    animation: changeColor 1s;
+    color: #00c3f9;
+    transform: translateX(15px) scale(1.1);
+
 }
 .skill_box .experience .firstjob{
     margin-bottom: 10px;
