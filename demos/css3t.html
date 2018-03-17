@@ -6,26 +6,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="keyword" content="bootstrap,yangchunying blog,html5 personal show">
     <!--<meta http-equiv="refresh" content="3">-->
-    <!--swiper-->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all">
-    <link rel="stylesheet" type="text/css" href="css/mouseHoverEffects.css" media="all">
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <style>
-        .section{
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../css/mouseHoverEffectsback.css" media="all">
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../js/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-<!-- //city -->
+
 <div class="section city cityqd" id="city">
     <div class="container">
         <h3 class="tittle">CSS3一些小效果</h3>
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 effect-1">
                 <div class="img">
-                    <img alt="" src="images/qingdaozhanqiao.jpeg" class="img-responsive img-thumbnail">
+                    <img alt="" src="../images/qingdaozhanqiao.jpeg" class="img-responsive img-thumbnail">
                 </div>
                 <div class="info">
                     <h3 class="theme">introduction</h3>
@@ -35,7 +29,7 @@
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 effect-2">
                 <div class="img">
-                    <img alt="" src="images/QDHT.jpeg" class="img-responsive img-thumbnail">
+                    <img alt="" src="../images/QDHT.jpeg" class="img-responsive img-thumbnail">
                 </div>
                 <div class="info">
                     <h3 class="theme">introduction</h3>
@@ -45,7 +39,7 @@
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 effect-3">
                 <div class="img">
-                    <img alt="" src="images/QDTP.jpeg" class="img-responsive img-thumbnail">
+                    <img alt="" src="../images/QDTP.jpeg" class="img-responsive img-thumbnail">
                 </div>
                 <div class="info">
                     <h3 class="theme">introduction</h3>
@@ -55,7 +49,7 @@
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 effect-4">
                 <div class="img">
-                    <img alt="" src="images/BJGG.jpeg" class="img-responsive img-thumbnail">
+                    <img alt="" src="../images/BJGG.jpeg" class="img-responsive img-thumbnail">
                 </div>
                 <div class="info">
                     <h3 class="theme">introduction</h3>
@@ -65,7 +59,7 @@
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 effect-5">
                 <div class="img">
-                    <img alt="" src="images/BJBWG.jpeg" class="img-responsive img-thumbnail">
+                    <img alt="" src="../images/BJBWG.jpeg" class="img-responsive img-thumbnail">
                 </div>
                 <div class="info">
                     <h3 class="theme">introduction</h3>
@@ -75,7 +69,7 @@
             </div>
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 effect-6">
                 <div class="img">
-                    <img alt="" src="images/BJTAM.jpeg" class="img-responsive img-thumbnail">
+                    <img alt="" src="../images/BJTAM.jpeg" class="img-responsive img-thumbnail">
                 </div>
                 <div class="info">
                     <h3 class="theme">introduction</h3>
@@ -88,64 +82,7 @@
         <div class="clearfix"></div>
     </div>
 </div>
-<script>
-    $(function () {
-        //雪花秀
-        function snow() {
-            //1、定义一片雪花模板
-            var flake = $("<div>").css({
-                "position": "absolute",
-                "color": "#fff"
-            }).html("❄");
+<script src="../js/bootstrap.js"> </script>
 
-            //获取页面的宽度，利用这个数来算出，雪花开始时left的值
-            var documentWidth = $(document).width();
-
-            //获取页面的高度 相当于雪花下落结束时Y轴的位置
-            var documentHieght = $(document).height();
-
-            //定义生成一片雪花的毫秒数
-            var millisec = 100;
-            //2、设置第一个定时器，周期性定时器，每隔一段时间（millisec）生成一片雪花；
-            setInterval(function() {
-                //随机生成雪花下落 开始 时left的值，相当于开始时X轴的位置
-                var startLeft = Math.random() * documentWidth;
-
-                //随机生成雪花下落 结束 时left的值，相当于结束时X轴的位置
-                var endLeft = Math.random() * documentWidth;
-
-                //随机生成雪花大小
-                var flakeSize = 5 + 20 * Math.random();
-
-                //随机生成雪花下落持续时间
-                var durationTime = 4000 + 7000 * Math.random();
-
-                //随机生成雪花下落 开始 时的透明度
-                var startOpacity = 0.7 + 0.3 * Math.random();
-
-                //随机生成雪花下落 结束 时的透明度
-                var endOpacity = 0.2 + 0.2 * Math.random();
-
-                //3、克隆一个雪花模板,定义雪花的初始样式，拼接到页面中
-                flake.clone().appendTo($("body")).css({
-                    "left": startLeft,
-                    "opacity": startOpacity,
-                    "font-size": flakeSize,
-                    "top": "-25px",
-                }).animate({ //执行动画
-                    "left": endLeft,
-                    "opacity": endOpacity,
-                    "top": documentHieght
-                }, durationTime, function() {
-                    //4、当雪花落下后，删除雪花。
-                    $(this).remove();
-                });
-            }, millisec);
-        };
-        snow();
-    })
-
-</script>
-<script src="js/bootstrap.js"> </script>
 </body>
 </html>

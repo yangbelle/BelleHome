@@ -557,6 +557,9 @@ input{}
     .gallery-thumbs{
         padding: 0 5px;
     }
+    .swiper-slide p{
+        width: 300px;
+    }
 }
 @media (max-width: 400px) {
     .gallery-top{
@@ -574,5 +577,8 @@ input{}
     .gallery-thumbs{
         height: 70px;
         padding: 0 15px;
+    }
+    .swiper-slide p{
+        width: 200px;
     }
 }
