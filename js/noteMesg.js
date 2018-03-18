@@ -4,6 +4,7 @@ $(function () {
     if (isIE && isIE == "8") {
         //alert("IE9");
         console.log('IE8');
+        var h3_versionTip=document.createElement('p');
         h3_versionTip.innerText='您的浏览器版本过低，不支持页面部分功能，请更新为最新版本';
         h3_versionTip.style.textAlign='center';
         document.body.insertBefore(h3_versionTip,document.body.firstChild);
