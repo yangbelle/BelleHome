@@ -19,32 +19,32 @@
     <![endif]-->
     <script src="js/jquery-1.9.1.min.js"></script>
     <script >
-        // $(function () {
-        //     var ieVerTips='<p>您的浏览器版本过低，不支持页面部分功能，请更新为最新版本</p>';
-        //     var browser = navigator.appName;
-        //     var b_version = navigator.appVersion;
-        //     var version = b_version.split(";");
-        //     var h3_versionTip=document.createElement('p');
-        //     var trim_Version = version[1].replace(/[ ]/g, "");
-        //     if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE8.0") {
-        //         //alert("IE9");
-        //         console.log('IE8');
-        //         h3_versionTip.innerText='您的浏览器版本过低，不支持页面部分功能，请更新为最新版本';
-        //         h3_versionTip.style.textAlign='center';
-        //         document.body.insertBefore(h3_versionTip,document.body.firstChild);
-        //     }
-        // });
-        $(document).ready(function(){
-            var brow=$.browser;
-            var bInfo="";
-            if(brow.isMsie&&brow.version=="8.0")
-            {
-                var h3_versionTip=document.createElement('p');
+        $(function () {
+            var ieVerTips='<p>您的浏览器版本过低，不支持页面部分功能，请更新为最新版本</p>';
+            var browser = navigator.appName;
+            var b_version = navigator.appVersion;
+            var version = b_version.split(";");
+            var h3_versionTip=document.createElement('p');
+            var trim_Version = version[1].replace(/[ ]/g, "");
+            if (browser == "Microsoft Internet Explorer" && trim_Version == "MSIE8.0") {
+                //alert("IE9");
+                console.log('IE8');
                 h3_versionTip.innerText='您的浏览器版本过低，不支持页面部分功能，请更新为最新版本';
                 h3_versionTip.style.textAlign='center';
-                document.body.insertBefore(h3_versionTip,null);
+                document.body.insertBefore(h3_versionTip,document.body.firstChild);
             }
         });
+        // $(document).ready(function(){
+        //     var brow=$.browser;
+        //     var bInfo="";
+        //     if(brow.isMsie&&brow.version=="8.0")
+        //     {
+        //         var h3_versionTip=document.createElement('p');
+        //         h3_versionTip.innerText='您的浏览器版本过低，不支持页面部分功能，请更新为最新版本';
+        //         h3_versionTip.style.textAlign='center';
+        //         document.body.insertBefore(h3_versionTip,null);
+        //     }
+        // });
     </script>
 </head>
 <body>
